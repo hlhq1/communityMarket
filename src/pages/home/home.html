@@ -1,0 +1,87 @@
+<!--菜单放在最外层最和谐##########################-->
+<ion-menu [content]="mycontent">
+  <ion-header>
+    <ion-navbar class="menu_title">
+      菜单
+   </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+          <button ion-item (click)="goToLogoIn()" class="menu_list">
+              登录
+              <ion-icon name="ios-arrow-forward" class = "home_list_banner"></ion-icon>
+          </button>
+          <button ion-item (click)="goToRegister()" class="menu_list">
+              注册
+              <ion-icon name="ios-arrow-forward" class = "home_list_banner"></ion-icon>
+          </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #mycontent></ion-nav>
+
+<ion-header>
+  <ion-navbar class="home_location" >
+    {{location}}
+  </ion-navbar>
+  <ion-icon name="md-menu" (click)="openMenu()" class="menuToggle"></ion-icon>
+  <div class="herder_icon">
+    <ion-icon name="ios-more" class="header_more"></ion-icon>
+    <ion-icon name="ios-cart-outline" class="header_cart" (click)="goToCart()">
+      <span class="herder_cart_messege"></span>
+    </ion-icon>
+  </div>
+</ion-header>
+
+<ion-content >
+
+  <!--<ion-refresher (refresh)="doRefresh($event)">-->
+    <!--<ion-refresher-content-->
+      <!--pullingIcon="arrow-dropdown"-->
+      <!--pullingText="Pull to refresh"-->
+      <!--refreshingSpinner="circles"-->
+      <!--refreshingText="Refreshing...">-->
+    <!--</ion-refresher-content>-->
+  <!--</ion-refresher>-->
+
+  <ion-slides style="height:27%" [options]="homeSlideOptions">
+    <ion-slide >
+      <div class="box banner"><img src="./assets/com_img/activity_1.jpg"/> </div>
+    </ion-slide>
+    <ion-slide >
+      <div class="box banner"><img src="./assets/com_img/activity_2.jpg"/></div>
+    </ion-slide>
+    <ion-slide >
+      <div class="box banner"><img src="./assets/com_img/activity_3.jpg"/></div>
+    </ion-slide>
+  </ion-slides>
+  <ion-item class="store_search_name">
+    <ion-label color="primary" >商店名字:</ion-label>
+    <ion-input [(ngModel)]="condition.storeName"  ></ion-input>
+  </ion-item>
+  <ion-item class="store_search_add">
+    <ion-label color="primary"  >商店位置:</ion-label>
+    <ion-input  class="store_search_add"  [(ngModel)]="condition.storeAddress" type="tel"></ion-input>
+  </ion-item>
+  <ion-item class="search_button">
+    <button  ion-button small (click)="search()">
+      <ion-icon name="search" ></ion-icon>
+    </button>
+  </ion-item>
+
+  <ion-card *ngFor="let store of stores" (click)="goToStore(store)" class="home_store_card">
+    <div style="margin:0 auto;">
+      <img src="{{'http://112.74.62.114:8080/file/U3ad1b2223bef5/market/Supermarket/'+store.id}}" class="home_store_img"/>
+      <!--<img src="./assets/com_img/test.png" class="home_store_img"/>-->
+    </div>
+    <ion-card-content class="home_store_centent">
+      <div class="sm_com_info">
+        <span class="sm_made_date"> 商店名: {{store.name}}</span><br>
+        <span> 商店地址: {{store.address}}</span><br>
+        <span>营业时间: {{store.businesshours}}</span><br>
+        <span>介绍: {{store.remark}}</span><br>
+        <span >距离您:<span class="distance_style">{{store.distance | number:'1.1-2'}}</span>米</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

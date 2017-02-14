@@ -1,0 +1,169 @@
+page-order {
+
+    // ***************
+ 
+    // ***************
+    .order_title{
+        color:#777;
+        text-align:center;
+        font-size:2.1rem;
+        font-weight:500;
+    }
+    .order_slide{
+        border-radius:6px;
+        // border:1px solid red;
+        display:block;
+    }
+
+    .order_timeline{
+        position:absolute;
+        top:0.75rem;
+        margin-top:0;
+        margin-bottom:0;
+        width:100%;
+        height:0;
+        text-align: center;
+        color:#333;
+        font-size:1.2rem;
+        font-weight:500;
+        letter-spacing:.1rem;
+        border-bottom:2px solid #ccc;
+    }
+
+    .order_timeline span{
+        position:relative;
+        top:-0.75rem;
+        padding-left:2px;
+        padding-right: 2px;
+        color:#777;
+        border-radius:10px;
+        background-color: #ccc;
+    }
+    .order_content{
+        padding-top:1rem;
+        letter-spacing:.1rem;
+    }
+    .order_marketname{
+        padding-top:.5rem;
+        padding-bottom:.5rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        margin-bottom:0;
+        text-align:left;
+        font-size:1.3rem;
+        color:#387ef5;
+        // color:#666;
+        background-color:#eaeaea;
+        border:1px solid #ddd;
+        border-bottom:2px solid #ccc;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .order_marketname ion-icon{
+        color:#387ef5;
+        font-size:1.3rem;
+    }
+
+    .order_status{
+        float:right;
+        color:#f53d3d;
+        // font-family:"Microsoft YaHei";
+    }
+
+    .order_list{
+        padding-top:.5rem;
+        padding-left:.5rem;
+        padding-right:.5rem;
+        padding-bottom:1rem;
+        background-color:#eaeaea;
+        border:1px solid #ddd;
+        border-radius:.5rem;
+    }
+    .order_list p{
+        margin-top:0; 
+        margin-bottom:0; 
+    }
+    .order_list_item{
+        display: flex;
+        display: -webkit-flex;
+        height:96px;
+        background-color:#fcfcfc;
+        border-radius:.3rem;
+        padding:1rem;
+        margin-top:.5rem !important;
+    }
+    // .order_list_item span{
+    //     font-size:1.3rem;
+    // }
+    .order_list_img{
+        flex:1;
+        width:80px;
+        // height:80px;
+        float:left;
+        line-height: 80px;
+        text-align: center;
+    }
+    .order_list_description{
+        flex:4;
+        float:left;
+        text-align: left;
+        margin-left: 10px;
+        font-size:1.2rem;
+        color:#444;
+    }
+    .order_lables{
+        padding-top:.3rem;
+    }
+    .order_lable{
+        border-radius:3px;
+        padding-left:1px;
+        padding-right:1px;
+        margin-right:1rem;
+        font-size:1rem;
+        font-weight:400;
+        color:#eaeaea;
+        background-color:#f53d3d;
+    }
+
+    .order_list_info{
+        flex:1;
+    }
+    .order_list_price{
+        text-align: right;
+        letter-spacing: 0;
+        font-size:1.4rem;
+        font-weight: 600;
+        color:#555;
+    }
+    .order_list_amount{
+        text-align: right;
+        margin-top:.5rem;
+        letter-spacing: 0;
+        font-size:1rem;
+        font-weight: 600;
+        color:#777;
+    }
+
+    .order_footer{
+        font-size:1.2rem;
+        color:#444;
+        text-align: right;
+        padding-right:1rem;
+    }
+    .order_footer_info{
+        // float:left;
+        // margin-right: 1rem;
+    }
+    .order_remove{
+        margin:.5rem 0 0;
+        padding-left:.7rem;
+        padding-right:1rem;
+        font-size:1.3rem;
+        border-radius: .3rem;
+    }
+    .order_remove ion-icon{
+        font-size:3rem;
+        
+    }
+}

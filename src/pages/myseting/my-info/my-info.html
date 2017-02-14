@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar class = "myinfo_title">
+      个人信息
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines class="myinfo_header">
+        <button ion-item  class = "myinfo" (click)="updateHeadImg()">
+            <ion-icon name="ios-arrow-forward" class = "myinfo_banner myinfo_head_banner"></ion-icon>
+            <span class="myinfo_head_char">&nbsp;头像</span>
+            <img src="../../../assets/com_img/head.png" alt="" class="myinfo_headimg myinfo_right" width-20>
+        </button>
+  </ion-list>
+
+  <ion-list>
+        <button ion-item  class = "myinfo myinfo_cont_start" (click)="openUpdateNamePage()">
+            <ion-icon name="ios-arrow-forward" class = "myinfo_banner"></ion-icon>
+            &nbsp;名字<span class="myinfo_right">{{customer.name}}</span>
+        </button>
+
+        <button ion-item (click)="openUpdateSex()" class = "myinfo">
+            <ion-icon name="ios-arrow-forward" class = "myinfo_banner"></ion-icon>
+            &nbsp;性别<span class="myinfo_right">{{customer.sex}}</span>
+        </button>
+
+        <button ion-item  class = "myinfo myinfo_foot1">
+            &nbsp;账号<span class="myinfo_right">{{customer.id}}</span>
+        </button>
+        <button ion-item  class = "myinfo myinfo_foot2">
+            &nbsp;会员等级<span class="myinfo_right">{{level}}</span>
+        </button>
+
+  </ion-list>
+
+</ion-content>
+

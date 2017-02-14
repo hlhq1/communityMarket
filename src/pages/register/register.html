@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar class = "register_title">
+      注册
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label>名字:</ion-label>
+    <ion-input [(ngModel)]="customer.name"  placeholder="请输入名字"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >手机号:</ion-label>
+    <ion-input  [(ngModel)]="customer.account" type="tel" placeholder="请输入手机号码"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label >性别:</ion-label>
+     <ion-select [(ngModel)]="customer.sex">
+       <ion-option value="man" selected="true">男</ion-option>
+       <ion-option value="woman" >女</ion-option>
+     </ion-select>
+    </ion-item>
+    <ion-item>
+    <ion-label>密码:</ion-label>
+    <ion-input [(ngModel)]="customer.password" type="password" placeholder="请输入密码" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>重复密码:</ion-label>
+    <ion-input  #repeatPassword [(ngModel)]="password_copy" type="password" (blur)="ifShowWarn()" placeholder="请再次输入密码" ></ion-input>
+  </ion-item>
+
+  <!--修改，不使用hidden来控制显示与否，hidden的优先级太低，容易被覆盖-->
+  <div *ngIf="show_warn" class="pw_disaffinity">
+    两次密码不相同，请重新输入
+  </div>
+  <button ion-button full class="register_buttom" (click)="register(customer)">注&nbsp;册</button>
+</ion-content>

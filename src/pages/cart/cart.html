@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar class="cart_title">
+      购物车
+  </ion-navbar>
+</ion-header>
+<div class="sm_search_lables"></div>
+<!--商品信息-->
+<ion-content>
+  <div *ngFor="let index of supermarkets"  >
+      <label class="supermarket_name">{{index.name}}</label>
+    <ion-checkbox   [(ngModel)]="index.isChoose" (ionChange)="getSelect(index)"></ion-checkbox>
+    <ion-card  *ngFor="let item of cartItems[index.id]" class="sm_card">
+      <ion-card-content style="position:relative;">
+        <!--<ion-item>-->
+          <img  class="image_div"  src="{{'http://112.74.62.114:8080/file/U3ad1b2223bef5/market/Product/'+item.product.id}}" />
+          <!--</ion-item>-->
+        <ion-item class="text_div">
+            <span class="sm_warranty">单价:{{item.product.price}}</span><br>
+            <span class="sm_made_date">数量:{{item.num}}</span><br>
+            <span class="sm_made_date">生产日期:{{item.product.createdate | date:"yyyy-MM-dd"}}</span><br>
+            <span class="sm_warranty">保质期:{{item.product.validdate |  date:"yyyy-MM-dd"}}</span><br>
+            <span class="sm_warranty">生产批次:{{item.product.batch}}</span>
+        </ion-item>
+        <button ion-button outline color="danger" class="cart_remove" (click)="removeCartItem(item,index.id)">
+        <ion-icon class="delete_style" name="ios-trash"></ion-icon>&nbsp;删除</button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <button class="sure_style" ion-button  icon-right small  (click)="goToAddress()">确定</button>
+</ion-content>

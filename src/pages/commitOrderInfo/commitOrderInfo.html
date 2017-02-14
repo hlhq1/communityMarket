@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar class="order_title">
+      确认订单
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="text_tyle">
+
+    <ion-label>收件人:{{user.name}}</ion-label>
+    <ion-label >电话:{{user.tel}}</ion-label>
+    <ion-label>地址:{{user.address}}</ion-label>
+  </div>
+  <div class="sm_card" >
+    <p class="store_name">{{supermarket.name}}</p>
+    <ion-card  *ngFor="let item of cartItems" class="sm_card">
+      <ion-card-content class="sm_com_card">
+        <!--<div class="sm_com_img" >-->
+          <img  class="img_style" src="{{'http://112.74.62.114:8080/file/U3ad1b2223bef5/market/Product/'+item.product.id}}" />
+        <!--</div>-->
+        <div class="text">
+          <p class="sm_warranty">单价:{{item.product.price}}</p>
+          <p class="sm_made_date">数量:{{item.num}}</p>
+          <p class="sm_made_date">保质期:{{item.product.createdate |  date:"yyyy-MM-dd HH:mm:ss"}}</p>
+          <p class="sm_warranty">生产批次:{{item.product.batch}}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <span class="totalMoney_style">总价为:{{totalMoney}}</span>
+    <button style="float:right" ion-button small (click)="createOrder()">提交订单</button>
+  </div>
+</ion-content>

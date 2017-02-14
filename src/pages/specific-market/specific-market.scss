@@ -1,0 +1,91 @@
+specific-market{
+  .smarket_title{
+    color:#777;
+    text-align:center;
+    font-size:2.1rem;
+    font-weight:500;
+    padding-right:56px;
+  }
+
+  .header_icon{
+    position:absolute;
+    top:0;
+    right:0;
+    height:$toolbar-md-height;
+    line-height:$toolbar-md-height;
+    font-size:2rem;
+    color:#777;
+  }
+
+  .header_more{
+    float: right;
+    margin-right:1rem;
+  }
+  .header_cart{
+    position:relative;
+    float: right;
+  }
+  .header_badge{
+    position: relative;
+    top: -1rem;
+    left: -1.2rem;
+    padding: 1px;
+    font-size: 1.2rem;
+    color: #f3f3f3;
+    background-color: #f53d3d;
+    border-radius: .5rem;
+    line-height: 1;
+    text-align: center;
+    padding-right: .2rem;
+  }
+  //####################################
+
+  .sm_card{
+    display:flex;
+    border:1px solid #ddd;
+    width: calc(100% - .6rem);
+    margin: .3rem;
+    border-radius:.3rem;
+  }
+  .sm_com_img{
+    flex:1;
+    width:calc(50% - 1rem);
+    padding-left:.5rem;
+    padding-right:.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .sm_com_card{
+    flex:3;
+    padding: .5rem .5rem 0;
+
+  }
+  .sm_com_info{
+    color:#777;
+  }
+
+  .sm_made_date{
+    margin-right:1rem;
+  }
+  .sm_cart{
+    position: relative;
+    top: -1.5rem;
+    float: right;
+    margin-right: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2.7rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    color: #f3f3f3;
+    background-color: #f53d3d;
+    border: 1px solid #f53d3d;
+  }
+
+  .sm_price{
+    position: relative;
+    float: left;
+    color: #f53d3d;
+  }
+}

@@ -1,0 +1,64 @@
+page-my-info{
+    .myinfo_title{
+        text-align:center;
+        color:#777;
+        font-size:2.1rem;
+        font-weight:500;
+        padding-right:56px;
+    }
+
+    //公共
+    .myinfo_right{
+        float:right;
+        margin-right:1rem;
+    }
+    .myinfo{
+        color:#555;
+        background-color:#fff;
+    }
+    .myinfo_banner{
+        float:right;
+        margin-right:1rem;
+        color:#aaa;
+    }
+
+    //头像栏
+    .myinfo_header{
+        position: relative;
+        margin-top:1.5rem;
+        margin-bottom:1.5rem;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+    }
+    .myinfo_headimg{
+        width:4rem;
+        height:4rem;
+        border:1px solid #ddd;
+        border-radius:.5rem;
+    }
+    .myinfo_head_banner{
+        margin-top:1.2rem;
+    }
+    .myinfo_head_char{
+        position:relative;
+        top:1.2rem;
+    }
+
+    //list content
+    .myinfo_cont_start{
+        border-top:1px solid #ccc;
+    }
+    .myinfo_cont_end{
+        border-bottom:1px solid #ccc;
+    }
+
+    //不可修改信息栏
+    .myinfo_foot1{
+        margin-top: 1.5rem;
+        border-top:1px solid #ccc;
+    }
+    .myinfo_foot2{
+        border-bottom:1px solid #ccc;
+    }
+
+}

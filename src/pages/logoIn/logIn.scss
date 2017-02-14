@@ -1,0 +1,32 @@
+page-login{
+    .login_title{
+        text-align:center;
+        color:#777;
+        font-size:2.1rem;
+        font-weight:500;
+        padding-right:56px;
+    }
+
+    .login_buttom{
+        margin-top:1rem;
+        font-family: "SourceHanSansCN_Regular";
+        font-size: 1.7rem;
+        color: #f4f4f4;
+    }
+    .login_footer{
+        margin-top:1rem;
+        color:#777;
+    }
+    .login_left{
+        float:left;
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        // color:#777;
+    }
+    .login_right{
+        float:right;
+        margin-right: 1rem;
+        font-size: 1.3rem;
+        // color:#f53d3d;
+    }
+}

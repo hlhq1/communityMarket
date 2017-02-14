@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar class="smarket_title">
+    {{store.name}}
+  </ion-navbar>
+
+  <div class="header_icon">
+    <ion-icon name="ios-more" class="header_more"></ion-icon>
+    <ion-icon name="ios-cart-outline" class="header_cart" (click)="goToCart()">
+      <span class="header_badge"></span>
+    </ion-icon>
+  </div>
+</ion-header>
+
+
+
+<ion-content>
+
+  <div class="sm_contentnav">
+    <!--<div class="sm_search"></div>-->
+
+    <!--[hideCancelButton]="shouldHideCancel"-->
+
+    <!--<ion-searchbar-->
+      <!--[(ngModel)]="com_search_input"-->
+      <!--(ionInput)="getItems($event)"-->
+      <!--(input)="onInput($event)"-->
+      <!--(cancel)="onCancel($event)"-->
+      <!--placeholder="输入想要的商品">-->
+    <!--</ion-searchbar>-->
+
+    <div class="sm_search_lables"></div>
+  </div>
+  <ion-card  *ngFor="let product of products" class="sm_card">
+    <div class="sm_com_img" >
+      <!--<img src="./assets/com_img/test.png" />-->
+      <img src="{{'http://112.74.62.114:8080/file/U3ad1b2223bef5/market/Product/'+product.id}}" />
+    </div>
+    <ion-card-content class="sm_com_card">
+      <p (click)="openComDetailsPage(item)">{{product.name}}</p>
+      <div class="sm_com_info" (click)="openComDetailsPage(item)">
+        <p>
+          <span class="sm_made_date">生产日期:{{product.createdate | date:"yyyy-MM-dd HH:mm:ss"}}</span><br>
+          <span class="sm_warranty">保质期:{{product.validdate | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+        </p>
+        <span>批次号:{{product.batch}}</span>
+      </div>
+
+      <ion-icon name="ios-cart-outline" class="sm_cart" (click)="addToCart(product)"></ion-icon>
+      <span class = "sm_price">￥&nbsp;{{product.price}}</span>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

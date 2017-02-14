@@ -1,0 +1,104 @@
+page-home {
+    .home_title_s{
+        font-size:2rem;
+        font-weight:400;
+        color:rgba(56, 126, 245, .77);
+    }
+    .home_title{
+      font-size:20px;
+      font-weight:100;
+      color:#0086b3;
+      position:center;
+
+    }
+    .herder_icon{
+        position:absolute;
+        top:0;
+        right:0;
+        // background-color:#000;
+        width:$toolbar-md-height*2;
+        height:$toolbar-md-height;
+        padding-right:1.7rem;
+        line-height:$toolbar-md-height;
+        font-size:2rem;
+        color:#777;
+    }
+
+    .header_more{
+        float: right;
+        margin-right:0;
+    }
+    .header_cart{
+        float: right;
+        margin-right:1.7rem;
+    }
+
+    //stores show
+    .home_store_card{
+        padding:.5rem;
+        color:#555;
+        background-color:#fff;
+        border:1px solid #ddd;
+    }
+    .home_store_img{
+        width:calc(100% - 1rem);
+        border-radius: .5rem;
+        border:1px solid #ddd;
+        margin:0 auto;
+    }
+    .home_store_centent{
+        padding:.5rem;
+    }
+   .store_search_name{
+     width: 40%;
+     font-size:10px;
+     float:left;
+
+  }
+  .store_search_add{
+    width: 40%;
+    font-size:10px;
+    float:left;
+  }
+  .search_button{
+    width:20%;
+    float:left;
+  }
+
+    //menu
+    .home_list_banner{
+        float:right;
+        margin-right:1rem;
+        color:#aaa;
+    }
+    .menuToggle{
+        position:absolute;
+        top:1.1rem;
+        left:1.2rem;
+        font-size:3rem;
+        color:#777;
+    }
+
+    .menu_title{
+        text-align:center;
+        color:#777;
+        font-size:2.1rem;
+        font-weight:500;
+    }
+    .menu_list{
+        color:#777;
+        font-size:1.7rem;
+    }
+  .home_location{
+    text-align: center;
+    font-size:1.5rem;
+    color:#0086b3;
+    padding-left:25%;
+    padding-right:25%;
+  }
+  .distance_style{
+    color:#ff6600;
+  }
+
+
+}

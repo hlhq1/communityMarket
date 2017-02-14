@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar class = "update_name_title">
+      名字
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list no-lines class="update_name_input">
+      <ion-input type="text"  value="{{customer.name}}" (blur)='updateName(customer)' [(ngModel)]="customer.name"></ion-input>
+      <!--<ion-input type="text"  [value]="customer.name" (blur)="customer.name = $event.target.value; updateName(customer)"></ion-input> 第二种数据绑定方法-->
+  </ion-list>
+
+</ion-content>

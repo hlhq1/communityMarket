@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar class="cart_title">
+    撰写收货信息
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>收件人:</ion-label>
+    <ion-input [(ngModel)]="user.name"  placeholder="请输入收件人的名字"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >电话:</ion-label>
+    <ion-input  [(ngModel)]="user.tel" type="tel" placeholder="请输入联系电话"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>地址:</ion-label>
+    <ion-input [(ngModel)]="user.address" type="address" placeholder="请输入收货地址"></ion-input>
+  </ion-item>
+  <button  style="float:right" ion-button  (click)="returnToCommitOrderPage(user)">确定</button>
+  <!--returnToCarts(name.value,tel.value,address.value)-->
+</ion-content>

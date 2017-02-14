@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar class="score_title">
+      积分详情界面
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let score of scoreList">
+      <div class="div_show">
+        <img class="img_type" src="{{'http://112.74.62.114:8080/file/U3ad1b2223bef5/market/Product/'+score.product.id}}" />
+        <div class="score_content">
+          <p type="color:red">{{score.date| date:"yyyy-MM-dd HH:mm:ss" }}</p>
+          <p>积分:+{{score.num}}</p>
+          <p>商品:{{score.product.name}}</p>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

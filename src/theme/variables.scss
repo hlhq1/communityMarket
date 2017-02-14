@@ -1,0 +1,123 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  mblue:      #09f
+);
+$background-color:#f4f4f4;
+$tabs-background:#f3f3f3;
+$toolbar-background:#f3f3f3;	
+
+//font-family
+@font-face { 
+  font-family: SourceHanSansCN_Regular; //字体命名
+  src: url("../assets/fonts/SourceHanSansCN-Regular.otf"); 
+} 
+$font-family-base:lucida, "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "微软雅黑";
+$font-family-md-base:lucida, "Helvetica Neue", Helvetica, Arial, "SourceHanSansCN_Regular",  "Microsoft YaHei", "微软雅黑";
+$font-family-ios-base:lucida, "Helvetica Neue", Helvetica, Arial, "SourceHanSansCN_Regular",  "Microsoft YaHei", "微软雅黑";
+//font-size
+$toolbar-md-title-font-size: 2.8rem;
+$toolbar-md-title-text-color: #387ef5;
+$toolbar-ios-title-font-size: 2.8rem;
+$toolbar-ios-title-text-color: #387ef5;
+
+.header-md::after{
+  background-position: 0 -3px;
+}
+.header-ios::after{
+  background-position: 0 -3px;
+}
+.scroll-content{
+    border-top:0 !important;
+}
+.swiper-container{
+  overflow-y:scroll !important;//slider滑动条
+}
+.card-md p{
+  color:#777 !important;
+}
+.card-ios p{
+  color:#777 !important;
+}
+//myself page
+.seting_title{
+  color:#777 !important;
+  font-size:2.1rem !important;
+}
+.item-inner{
+  margin:2px 0 !important;
+}
+.label-md {
+    margin: 0.8rem 8px 0.8rem 0 !important;
+}
+.label-ios {
+    margin: 0.8rem 8px 0.8rem 0 !important;
+}
+//toolbar height
+// $toolbar-md-height:49px; //56px
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+$ionicons-font-path: "../assets/fonts";
+@import "ionicons";
+

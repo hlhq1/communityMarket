@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar class = "update_sex_title">
+      性别
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list radio-group [(ngModel)]="customer.sex" class="update_sex_list">
+
+        <ion-item>
+            <ion-label>男</ion-label>
+            <ion-radio [value]="man" (click)="distroyPage()"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>女</ion-label>
+            <ion-radio [value]="woman" (click)="distroyPage()"></ion-radio>
+        </ion-item>
+
+
+    </ion-list>
+
+    <!--input双向绑值的两种方法-->
+    <!--<ion-input type="text"  [value]="customer.sex" (input)="customer.sex = $event.target.value; distroyPage($event.target.value)"></ion-input>-->
+    <!--<ion-input type="text" (blur)='distroyPage($event.target.value)' [(ngModel)]="customer.sex"></ion-input>-->
+</ion-content>

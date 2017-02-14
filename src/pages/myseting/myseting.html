@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar class = "seting_title">
+      我的
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list >
+      <button ion-item (click)="myInfoDetails(mockdata)" class="self_info">
+
+        <div class="self_info_left">
+          <img src="../../assets/com_img/head.png" alt="" class="self_info_headimg">
+        </div>
+
+        <div class="self_info_right">
+          <p>{{mockdata.name}}</p>
+          <p>ID:&nbsp;{{mockdata.id}}</p>
+          <p>积分:&nbsp;{{mockdata.score}}</p>
+        </div>
+
+        <!--在andriod下，没有向右的箭头，手动添加会导致ios下乱码；双平台适应之前，需要重新控制显示与否！！-->
+        <ion-icon name="ios-arrow-forward" class = "self_headerlist_banner"></ion-icon>
+
+      </button>
+    </ion-list>
+
+  <ion-list>
+      <!-- '#f53d3d'  '#09f'" <button ion-item *ngFor="let item of items" (click)="item.fun" class = "self_list">-->
+    <ion-item  (click)="goToScore()">
+      <ion-icon name="积分" color='#09f' (click)="goToScore()"></ion-icon> &nbsp;积分
+      <ion-icon name="ios-calculator" class = "self_list_banner"></ion-icon><br>
+    </ion-item>
+   <ion-item (click)="goToBuyMethod()">
+     <ion-icon name="购物指南" color='#09f'></ion-icon> &nbsp;购物指南
+     <ion-icon name="ios-arrow-forward" class = "self_list_banner"></ion-icon><br>
+   </ion-item>
+    <ion-item>
+      <ion-icon name="设置" color='#09f'></ion-icon> &nbsp;设置
+      <ion-icon name="ios-settings" class = "self_list_banner"></ion-icon><br>
+    </ion-item>
+
+      <!--</button>-->
+  </ion-list>
+
+  <ion-list>
+      <button ion-item (click)="exit_login()" class = "self_exit">
+        {{exit_or_login}} &nbsp;<ion-icon name="ios-log-out"></ion-icon>
+      </button>
+  </ion-list>
+</ion-content>
+

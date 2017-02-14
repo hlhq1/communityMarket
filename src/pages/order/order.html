@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar class="order_title">
+    订单
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+  <div *ngFor="let order of orderList"  >
+      <!--<ion-slide>-->
+      <p class="order_timeline"><span> {{order.createdate | date:"yyyy-MM-dd HH:mm:ss"}} </span></p>
+      <!--<div class="order_content">-->
+        <p class="order_marketname" >
+          <ion-icon name="ios-link" class=""></ion-icon>{{ order.supermarket.name }}
+          <span class="order_status">{{ order.state }}</span>
+        </p>
+        <!--订单商品列表-->
+        <div class="order_list" *ngFor="let item of order_orderItems[order.id]"  >
+          <div  class="order_list_item">
+            <img src="{{'http://112.74.62.114:8080/file/U3ad1b2223bef5/market/Product/'+item.product.id}}" alt="" class="order_list_img">
+            <div class="order_list_description">
+              <p>【{{ item.product.name }}】{{item.product.remark}}</p>
+            </div>
+            <div class="order_list_info">
+              <p class="order_list_price">
+                ￥ {{item.product.price}}
+              </p>
+              <p class="order_list_amount">
+                x{{item.num}}
+              </p>
+            </div>
+          </div>
+          <div class="order_footer">
+            <p class="order_footer_info">{{num[order.id]}}件商品 共计:￥{{totalMoney[order.id]}}</p>
+          </div>
+        </div>
+      <!--</div>-->
+      <!--</ion-slide>-->
+  </div>
+</ion-content>

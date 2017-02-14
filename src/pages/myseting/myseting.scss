@@ -1,0 +1,65 @@
+page-myseting {
+    .seting_title{
+        text-align:center;
+        font-weight:500;
+    }
+
+    .self_list_banner{
+        float:right;
+        margin-right:1rem;
+        color:#aaa;
+    }
+
+    .self_list{
+        color:#555;
+        background-color:#fff;
+    }
+    
+    .self_info{
+        position: relative;
+        display: flex;
+        margin-top: 1.5rem;
+        margin-bottom:1.5rem;
+        min-height:9rem;
+        background-color: #fff;
+        color:#666;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+    }
+    .self_info_left{
+        flex:2;
+    }
+    .self_info_right{
+        flex:5;
+        padding-left:1rem;
+        //居中
+        position  : absolute;
+        top       : 50%;
+        left      : 47%;
+        transform : translate(-50%,-50%);
+    }
+    .self_info_right p{
+        margin-top: 1.2rem;
+    }
+    .self_info_headimg{
+        width:7rem;
+        height:7rem;
+        border-radius:.7rem;
+        border: 1px solid #ccc;
+    }
+    .self_headerlist_banner{
+        position:absolute;
+        top: 4.5rem;
+        right: calc(1rem + 16px);
+        color: #aaa;
+    }
+
+    .self_exit{
+        margin-top:2rem;
+        color:#555;
+        background-color: #fff;
+        text-align: center;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+    }
+}
